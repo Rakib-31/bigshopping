@@ -5,8 +5,8 @@ var Schema = mongoose.Schema;
 
 var TaskSchema = new Schema({
   name:{
-    type: String,
-    require: 'Rakib'
+      type: String,
+      
   },
   Created_date: {
     type: Date,
