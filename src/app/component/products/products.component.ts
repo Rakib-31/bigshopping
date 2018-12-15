@@ -18,8 +18,7 @@ export class ProductsComponent{
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService,
-    private categoryService: CategoryService) { 
+    private productService: ProductService) { 
 
     productService.getAll()
     .pipe(switchMap(products => {
@@ -32,7 +31,6 @@ export class ProductsComponent{
         this.products.filter(p => p.category === this.category) :
         this.products;
     });
-    this.categories$ = categoryService.getAll();
   }
 
 }
